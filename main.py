@@ -72,7 +72,7 @@ def get_db_connection():
 
 def decrypt_key(encrypted_key: str):
     print(encrypted_key)
-    print(key1)
+    # print(key1)
     dec = cipher_suite.encrypt(encrypted_key.strip().encode()).decode()
     print(dec)
     return dec 

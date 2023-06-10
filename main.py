@@ -14,6 +14,15 @@ import base64
 import string
 import random
 
+def get_db_connection():
+    conn = mysql.connector.connect(
+        host="localhost",
+        port='3307',
+        user="root",
+        password="",
+        database="login_management_db"
+    )
+    return conn
 
 def generate_random_string(length):
     letters = string.ascii_letters
@@ -57,16 +66,6 @@ sessions = {}
 
 API_KEY_NAME = "api_key"
 api_key_header = APIKeyHeader(name=API_KEY_NAME)
-
-def get_db_connection():
-    conn = mysql.connector.connect(
-        host="localhost",
-        port='3307',
-        user="root",
-        password="",
-        database="login_management_db"
-    )
-    return conn
 
 def decrypt_key(encrypted_key: str):
     print(encrypted_key)

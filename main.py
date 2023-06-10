@@ -50,8 +50,6 @@ encryptionKey = base64Decoding(generate_master_key())
 def encrypt_key( plaintext):
   cipher = AES.new(encryptionKey, AES.MODE_ECB)
   ciphertext = cipher.encrypt(pad(plaintext.encode("ascii"), AES.block_size))
-#   print(plaintext)
-#   print(ciphertext)
   return base64Encoding(ciphertext)
 
 app = FastAPI()
@@ -72,7 +70,6 @@ def get_db_connection():
 
 def decrypt_key(encrypted_key: str):
     print(encrypted_key)
-    # print(key1)
     dec = cipher_suite.encrypt(encrypted_key.strip().encode()).decode()
     print(dec)
     return dec 

@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "90182109-d58a-4bcc-ac84-636b8e7879cf",
+		"name": "fastapiweb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27988811"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/register?username=ghtjer&email=agjgfdd%40hjds.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"register"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "ghtjer"
+						},
+						{
+							"key": "email",
+							"value": "agjgfdd%40hjds.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticate",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api_key",
+						"value": "114d24ef9d",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/user/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserdata",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/getUserData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"getUserData"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

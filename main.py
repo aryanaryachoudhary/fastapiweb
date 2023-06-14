@@ -31,12 +31,18 @@ def generate_random_string(length):
     return random_string
 
 def base64Encoding(input):
+  print(input)
   dataBase64 = base64.b64encode(input)
+  print(dataBase64)
   dataBase64P = dataBase64.decode("UTF-8")
+  print(dataBase64P)
   return dataBase64P
 
 def base64Decoding(input):
+    print(input)
+    print(base64.decodebytes(input.encode("ascii")))
     return base64.decodebytes(input.encode("ascii"))
+   
 
 def generate_master_key():
     my_key_file = "key"
@@ -67,11 +73,11 @@ sessions = {}
 API_KEY_NAME = "api_key"
 api_key_header = APIKeyHeader(name=API_KEY_NAME)
 
-def decrypt_key(encrypted_key: str):
-    print(encrypted_key)
-    dec = cipher_suite.encrypt(encrypted_key.strip().encode()).decode()
-    print(dec)
-    return dec 
+# def decrypt_key(encrypted_key: str):
+#     print(encrypted_key)
+#     dec = cipher_suite.encrypt(encrypted_key.strip().encode()).decode()
+#     print(dec)
+#     return dec 
 
 def get_api_key(api_key: str = Depends(api_key_header)):
     print(api_key)

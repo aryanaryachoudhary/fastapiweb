@@ -17,10 +17,10 @@ import random
 def get_db_connection():
     conn = mysql.connector.connect(
         host="localhost",
-        port='enter-port',
+        port='3307',
         user="root",
         password="",
-        database="enter-db"
+        database="login_management_db"
     )
     return conn
 
